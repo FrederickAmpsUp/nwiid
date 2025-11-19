@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/frederickampsup/Code/nwiid/build/cmake_install.cmake",
-		"/home/frederickampsup/Code/nwiid/build/impl/cmake_install.cmake",
-		"/home/frederickampsup/Code/nwiid/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

@@ -1,2 +1,0 @@
-/sbin/ar qc libnwiid.a CMakeFiles/nwiid.dir/impl/bluetooth.c.o CMakeFiles/nwiid.dir/impl/command.c.o CMakeFiles/nwiid.dir/impl/connect.c.o CMakeFiles/nwiid.dir/impl/interface.c.o CMakeFiles/nwiid.dir/impl/process.c.o CMakeFiles/nwiid.dir/impl/state.c.o CMakeFiles/nwiid.dir/impl/thread.c.o CMakeFiles/nwiid.dir/impl/util.c.o
-/sbin/ranlib libnwiid.a

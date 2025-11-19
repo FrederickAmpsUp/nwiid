@@ -1,1 +1,0 @@
-/sbin/cc -g -Wl,--dependency-file=CMakeFiles/nwiid_test_open_wiimote.dir/link.d CMakeFiles/nwiid_test_open_wiimote.dir/open_wiimote.c.o -o nwiid_test_open_wiimote  ../libnwiid.a -lbluetooth -lrt
