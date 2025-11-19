@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/bluetooth.c.o -c /home/frederickampsup/Code/nwiid/impl/bluetooth.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/bluetooth.c",
+  "output": "CMakeFiles/nwiid.dir/impl/bluetooth.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/command.c.o -c /home/frederickampsup/Code/nwiid/impl/command.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/command.c",
+  "output": "CMakeFiles/nwiid.dir/impl/command.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/connect.c.o -c /home/frederickampsup/Code/nwiid/impl/connect.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/connect.c",
+  "output": "CMakeFiles/nwiid.dir/impl/connect.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/interface.c.o -c /home/frederickampsup/Code/nwiid/impl/interface.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/interface.c",
+  "output": "CMakeFiles/nwiid.dir/impl/interface.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/process.c.o -c /home/frederickampsup/Code/nwiid/impl/process.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/process.c",
+  "output": "CMakeFiles/nwiid.dir/impl/process.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/state.c.o -c /home/frederickampsup/Code/nwiid/impl/state.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/state.c",
+  "output": "CMakeFiles/nwiid.dir/impl/state.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/thread.c.o -c /home/frederickampsup/Code/nwiid/impl/thread.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/thread.c",
+  "output": "CMakeFiles/nwiid.dir/impl/thread.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid.dir/impl/util.c.o -c /home/frederickampsup/Code/nwiid/impl/util.c",
+  "file": "/home/frederickampsup/Code/nwiid/impl/util.c",
+  "output": "CMakeFiles/nwiid.dir/impl/util.c.o"
+},
+{
+  "directory": "/home/frederickampsup/Code/nwiid/build/tests",
+  "command": "/sbin/cc  -I/home/frederickampsup/Code/nwiid/include -g -o CMakeFiles/nwiid_test_open_wiimote.dir/open_wiimote.c.o -c /home/frederickampsup/Code/nwiid/tests/open_wiimote.c",
+  "file": "/home/frederickampsup/Code/nwiid/tests/open_wiimote.c",
+  "output": "tests/CMakeFiles/nwiid_test_open_wiimote.dir/open_wiimote.c.o"
+}
+]

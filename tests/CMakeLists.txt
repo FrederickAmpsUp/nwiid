@@ -1,0 +1,2 @@
+add_executable(nwiid_test_open_wiimote ${CMAKE_CURRENT_LIST_DIR}/open_wiimote.c)
+target_link_libraries(nwiid_test_open_wiimote PRIVATE nwiid)

@@ -1,0 +1,11 @@
+set(NWIID_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/bluetooth.c
+  ${CMAKE_CURRENT_LIST_DIR}/command.c
+  ${CMAKE_CURRENT_LIST_DIR}/connect.c
+  ${CMAKE_CURRENT_LIST_DIR}/interface.c
+  ${CMAKE_CURRENT_LIST_DIR}/process.c
+  ${CMAKE_CURRENT_LIST_DIR}/state.c
+  ${CMAKE_CURRENT_LIST_DIR}/thread.c
+  ${CMAKE_CURRENT_LIST_DIR}/util.c
+  PARENT_SCOPE
+)

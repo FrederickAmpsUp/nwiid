@@ -1,0 +1,8 @@
+/home/frederickampsup/Code/nwiid/build/CMakeFiles/nwiid.dir
+/home/frederickampsup/Code/nwiid/build/CMakeFiles/edit_cache.dir
+/home/frederickampsup/Code/nwiid/build/CMakeFiles/rebuild_cache.dir
+/home/frederickampsup/Code/nwiid/build/impl/CMakeFiles/edit_cache.dir
+/home/frederickampsup/Code/nwiid/build/impl/CMakeFiles/rebuild_cache.dir
+/home/frederickampsup/Code/nwiid/build/tests/CMakeFiles/nwiid_test_open_wiimote.dir
+/home/frederickampsup/Code/nwiid/build/tests/CMakeFiles/edit_cache.dir
+/home/frederickampsup/Code/nwiid/build/tests/CMakeFiles/rebuild_cache.dir
