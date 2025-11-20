@@ -1,4 +1,5 @@
 /* Copyright (C) 2007 L. Donnie Smith <donnie.smith@gatech.edu>
+ *               2025 Frederick Ziola <frederick.ziola@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -14,6 +15,15 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
+ */
+
+/**
+ * @mainpage NWiid Wii Remote Interface
+ *
+ * `nwiid` is a modernization of [`abstrakraft/cwiid`](https://github.com/abstrakraft/cwiid) using CMake.
+ *
+ * ## Usage Guide
+ * Usage guide still TODO, for now check out `cwiid_wiimote_t`.
  */
 
 #ifndef CWIID_H
