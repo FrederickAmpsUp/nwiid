@@ -21,7 +21,7 @@ jobs:
         doxyfile-path: ./Doxyfile
 
     - name: Deploy to GitHub pages
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
