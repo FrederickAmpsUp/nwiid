@@ -59,7 +59,7 @@
 #define CWIID_RPT_BALANCE		0x40
 #define CWIID_RPT_MOTIONPLUS	0x80
 #define CWIID_RPT_EXT		(CWIID_RPT_NUNCHUK | CWIID_RPT_CLASSIC | \
-                             CWIID_RPT_BALANCE | CWIID_RPT_MOTIONPLUS)
+                         CWIID_RPT_BALANCE | CWIID_RPT_MOTIONPLUS)
 
 /* LED flags */
 #define CWIID_LED1_ON	0x01
@@ -459,32 +459,77 @@ int cwiid_disable(cwiid_wiimote_t *wiimote, int flags);
  */
 int cwiid_set_mesg_callback(cwiid_wiimote_t *wiimote,
                        cwiid_mesg_callback_t *callback);
+// TODO: Double check accuracy and improve clarity of this doc
+/**
+ * @brief Retrieves available messages from a `cwiid_wiimote_t`.
+ * 
+ * @param wiimote The `cwiid_wiimote_t` to retrieve messages from.
+ * @param mesg_count [output] The number of messages being retrieved.
+ * @param mesg       [output] The list of messages being retrieved.
+ * @param timestamp  [output] The timestamp of the retrieved messages.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_get_mesg(cwiid_wiimote_t *wiimote, int *mesg_count,
                    union cwiid_mesg *mesg[], struct timespec *timestamp);
+// Gets the state of a wiimote? Research this...
 int cwiid_get_state(cwiid_wiimote_t *wiimote, struct cwiid_state *state);
+
+// Retrieves calibrations. Research these too.
 int cwiid_get_acc_cal(struct wiimote *wiimote, enum cwiid_ext_type ext_type,
                       struct acc_cal *acc_cal);
 int cwiid_get_balance_cal(struct wiimote *wiimote,
                           struct balance_cal *balance_cal);
 
 /* Operations */
+/**
+ * @brief Dispatches a single `cwiid_command` to a `cwiid_wiimote_t`.
+ *
+ * @param wiimote The `cwiid_wiimote_t` to dispatch the command to.
+ * @param command The `cwiid_command` specifying the type of command to dispatch.
+ * @param flags The flags to dispatch with the command, if applicable.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_command(cwiid_wiimote_t *wiimote, enum cwiid_command command,
                   int flags);
+
+// where are we sending it? check this out
 int cwiid_send_rpt(cwiid_wiimote_t *wiimote, uint8_t flags, uint8_t report,
                    size_t len, const void *data);
+
+// Side effects, yipiee
 int cwiid_request_status(cwiid_wiimote_t *wiimote);
+// This one's easy at least
 int cwiid_set_led(cwiid_wiimote_t *wiimote, uint8_t led);
+// Same here
 int cwiid_set_rumble(cwiid_wiimote_t *wiimote, uint8_t rumble);
+// Continuous/callback?
 int cwiid_set_rpt_mode(cwiid_wiimote_t *wiimote, uint8_t rpt_mode);
+
+// Read/write control registers it seems
 int cwiid_read(cwiid_wiimote_t *wiimote, uint8_t flags, uint32_t offset,
                uint16_t len, void *data);
 int cwiid_write(cwiid_wiimote_t *wiimote, uint8_t flags, uint32_t offset,
                 uint16_t len, const void *data);
-/* int cwiid_beep(cwiid_wiimote_t *wiimote); */
+/* int cwiid_beep(cwiid_wiimote_t *wiimote); */ // Would like to implement this and other audio features
 
 /* HCI functions */
+
+// internal only?
 int cwiid_get_bdinfo_array(int dev_id, unsigned int timeout, int max_bdinfo,
                            struct cwiid_bdinfo **bdinfo, uint8_t flags);
+
+/**
+ * @brief Searches for a wiimote and stores it's address in `bdaddr`.
+ * 
+ * @param bdaddr [output] The address of the wiimote.
+ * #param timeout The number of seconds to search for before failing.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ *
+ * @note Will return non-zero if no wiimote is found.
+ */
 int cwiid_find_wiimote(bdaddr_t *bdaddr, int timeout);
 
 #ifdef __cplusplus
@@ -492,3 +537,5 @@ int cwiid_find_wiimote(bdaddr_t *bdaddr, int timeout);
 #endif
 
 #endif
+/* this comment makes nvim indent other comments correctly */
+/* no kidding, don't remove it */
