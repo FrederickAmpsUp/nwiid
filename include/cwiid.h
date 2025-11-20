@@ -25,10 +25,18 @@
 #include <bluetooth/bluetooth.h>	/* bdaddr_t */
 
 /* Flags */
+
+/// @brief No special flags
+#define CWIID_FLAG_NULL      0x00
+/// @brief Enable the message interface
 #define CWIID_FLAG_MESG_IFC		0x01
+/// @brief Enable continuous reporting
 #define CWIID_FLAG_CONTINUOUS	0x02
+/// @brief Enable button repeating 
 #define CWIID_FLAG_REPEAT_BTN	0x04
+/// @brief Enable non-blocking I/O
 #define CWIID_FLAG_NONBLOCK		0x08
+/// @brief Enable MotionPlus
 #define CWIID_FLAG_MOTIONPLUS	0x10
 
 /* Report Mode Flags */
@@ -294,6 +302,13 @@ struct cwiid_state {
 };
 
 /* Typedefs */
+/**
+ * @class cwiid_wiimote_t
+ * @brief A handle to a wiimote.
+ *
+ * @see `cwiid_open`
+ * @see `cwiid_close`
+ */
 typedef struct wiimote cwiid_wiimote_t;
 
 typedef void cwiid_mesg_callback_t(cwiid_wiimote_t *, int,
@@ -315,21 +330,99 @@ extern "C" {
 #endif
 
 /* Error reporting (library wide) */
+/**
+ * @brief Stores a function to be called on a library error.
+ *
+ * @param err The error function to use.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_set_err(cwiid_err_t *err);
+/**
+ * @brief Default error callback for cwiid errors.
+ */
 void cwiid_err_default(struct wiimote *wiimote, const char *str, va_list ap);
 
 /* Connection */
 #define cwiid_connect cwiid_open
 #define cwiid_disconnect cwiid_close
-cwiid_wiimote_t *cwiid_open(bdaddr_t *bdaddr, int flags);
-cwiid_wiimote_t *cwiid_open_timeout(bdaddr_t *bdaddr, int flags, int timeout);
+
+/**
+ * @brief Opens a connection with a wiimote.
+ *
+ * @param bdaddr The address of the remote to open, or `BDADDR_ANY` to search for any wiimote.
+ * @param flags The flags to activate.
+ *
+ * @returns A handle to the wiimote, or NULL upon failure.
+ */
+cwiid_wiimote_t *cwiid_open(const bdaddr_t *bdaddr, int flags);
+/**
+ * @brief Opens a connection with a wiimote.
+ *
+ * @param bdaddr The address of the remote to open, or `BDADDR_ANY` to search for any wiimote.
+ * @param flags The flags to activate.
+ * @param timeout The amount of time (in seconds) to wait when searching for a wiimote.
+ *
+ * @returns A handle to the wiimote, or NULL upon failure.
+ */
+cwiid_wiimote_t *cwiid_open_timeout(const bdaddr_t *bdaddr, int flags, int timeout);
+/**
+ * @brief Waits for a iimote to initiate a connection.
+ *
+ * @param flags The flags to activate.
+ *
+ * @returns A handle to the wiimote, or NULL upon failure.
+ */
 cwiid_wiimote_t *cwiid_listen(int flags);
+/**
+ * @brief Closes a connection with a `cwiid_wiimote_t`.
+ *
+ * @param wiimote The wiimote to close. `*wiimote` is left in an invalid state
+ * after this call and should be set to `NULL`.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_close(cwiid_wiimote_t *wiimote);
 
 int cwiid_get_id(cwiid_wiimote_t *wiimote);
+
+/**
+ * @brief Stores arbitrary user data in a `cwiid_wiimote_t`
+ *
+ * @param wiimote The `cwiid_wiimote_t` to store data in.
+ * @param data A pointer (user-owned) to the data to store.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_set_data(cwiid_wiimote_t *wiimote, const void *data);
+/**
+ * @brief Retrieves user data stores in a `cwiid_wiimote_t`
+ *
+ * @param wiimote The `cwiid_wiimote_t` to retrieve data from.
+ * 
+ * @returns The user data stores in `wiimote`.
+ */
 const void *cwiid_get_data(cwiid_wiimote_t *wiimote);
+
+/**
+ * @brief Enables the specified flags on the specified `cwiid_wiimote_t`.
+ * 
+ * @param wiimote The `cwiid_wiimote_t` to enable the specified flags on.
+ * @param flags The flags to enable.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_enable(cwiid_wiimote_t *wiimote, int flags);
+/**
+ * @brief Disables the specified flags on the specified `cwiid_wiimote_t`.
+ *
+ * @param `wiimote` The `cwiid_wiimote_t` to disable the specified flags on.
+ * @param flags The flags to disable.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+Use html tags to create sections, for me it works. Then in the new section with function @see you can go from the main page to functions or files. This is a working excample:
+
+ */
 int cwiid_disable(cwiid_wiimote_t *wiimote, int flags);
 
 /* Interfaces */
