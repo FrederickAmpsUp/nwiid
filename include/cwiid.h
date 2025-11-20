@@ -311,8 +311,22 @@ struct cwiid_state {
  */
 typedef struct wiimote cwiid_wiimote_t;
 
+/**
+ * @class cwiid_mesg_callback_t
+ * @brief A message callback function.
+ *
+ * @see cwiid_set_mesg_callback
+ */
 typedef void cwiid_mesg_callback_t(cwiid_wiimote_t *, int,
                                    union cwiid_mesg [], struct timespec *);
+
+/**
+ * @class cwiid_err_t
+ * @brief An error callback function.
+ *
+ * @see cwiid_set_err
+ * @see cwiid_err_default
+ */
 typedef void cwiid_err_t(cwiid_wiimote_t *, const char *, va_list ap);
 
 /* get_bdinfo */
@@ -384,6 +398,7 @@ cwiid_wiimote_t *cwiid_listen(int flags);
  */
 int cwiid_close(cwiid_wiimote_t *wiimote);
 
+// id?
 int cwiid_get_id(cwiid_wiimote_t *wiimote);
 
 /**
@@ -420,12 +435,18 @@ int cwiid_enable(cwiid_wiimote_t *wiimote, int flags);
  * @param flags The flags to disable.
  *
  * @returns Zero (`0`) on success or non-zero on failure.
-Use html tags to create sections, for me it works. Then in the new section with function @see you can go from the main page to functions or files. This is a working excample:
-
  */
 int cwiid_disable(cwiid_wiimote_t *wiimote, int flags);
 
 /* Interfaces */
+/**
+ * @brief Stores a function to be called on a wiimote message.
+ *
+ * @param wiimote The affected `cwiid_wiimote_t`.
+ * @param callback The `cwiid_mesg_callback_t` to call on a message.
+ *
+ * @returns Zero (`0`) on success or non-zero on failure.
+ */
 int cwiid_set_mesg_callback(cwiid_wiimote_t *wiimote,
                        cwiid_mesg_callback_t *callback);
 int cwiid_get_mesg(cwiid_wiimote_t *wiimote, int *mesg_count,
