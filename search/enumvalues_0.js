@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['cwiid_5fcmd_5fled_0',['CWIID_CMD_LED',['../cwiid_8h.html#a4bf44c0cc6fddd02357b0e1ee029d36ea0b10e3cd8fce653dc34b895818221bb6',1,'cwiid.h']]],
+  ['cwiid_5fcmd_5frpt_5fmode_1',['CWIID_CMD_RPT_MODE',['../cwiid_8h.html#a4bf44c0cc6fddd02357b0e1ee029d36ea91c4591fee40150f6248c3668d3aa365',1,'cwiid.h']]],
+  ['cwiid_5fcmd_5frumble_2',['CWIID_CMD_RUMBLE',['../cwiid_8h.html#a4bf44c0cc6fddd02357b0e1ee029d36eaba1f2ec81a854d20919e2a31d4ec6804',1,'cwiid.h']]],
+  ['cwiid_5fcmd_5fstatus_3',['CWIID_CMD_STATUS',['../cwiid_8h.html#a4bf44c0cc6fddd02357b0e1ee029d36ead32b9347fa465e80c3a77b34016f2180',1,'cwiid.h']]],
+  ['cwiid_5ferror_5fcomm_4',['CWIID_ERROR_COMM',['../cwiid_8h.html#abd188d709168002843a0903298761087aaac09c39831d027fac4f485526c336fd',1,'cwiid.h']]],
+  ['cwiid_5ferror_5fdisconnect_5',['CWIID_ERROR_DISCONNECT',['../cwiid_8h.html#abd188d709168002843a0903298761087ab3513b5a21204283ddc5bdcdbc07691d',1,'cwiid.h']]],
+  ['cwiid_5ferror_5fnone_6',['CWIID_ERROR_NONE',['../cwiid_8h.html#abd188d709168002843a0903298761087a912c1bc067a1341e23c062ec09e6af48',1,'cwiid.h']]],
+  ['cwiid_5fext_5fbalance_7',['CWIID_EXT_BALANCE',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1a118719d8c238e3d86b79191c8b260dd2',1,'cwiid.h']]],
+  ['cwiid_5fext_5fclassic_8',['CWIID_EXT_CLASSIC',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1ad8c256b9ef07ab3ae64999973b5c2a33',1,'cwiid.h']]],
+  ['cwiid_5fext_5fmotionplus_9',['CWIID_EXT_MOTIONPLUS',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1a747df01a60472e571a100bebcfa1dbc6',1,'cwiid.h']]],
+  ['cwiid_5fext_5fnone_10',['CWIID_EXT_NONE',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1a15ab8e05748c45ff30351b81bb203a03',1,'cwiid.h']]],
+  ['cwiid_5fext_5fnunchuk_11',['CWIID_EXT_NUNCHUK',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1a31be15890db01f6c3911291c958e15e9',1,'cwiid.h']]],
+  ['cwiid_5fext_5funknown_12',['CWIID_EXT_UNKNOWN',['../cwiid_8h.html#a14d487ccba80fdc2d0d85fd96b2a3db1a95ebb624bb731152590dd4a6c2f8e2ae',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5facc_13',['CWIID_MESG_ACC',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9abedf9f8b5c27e367472a8548b5ec1f65',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fbalance_14',['CWIID_MESG_BALANCE',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a78e041e86be1f74f127f7dbf04a5143b',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fbtn_15',['CWIID_MESG_BTN',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a2f0f735b8b40f37854c0bcf5abec34c6',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fclassic_16',['CWIID_MESG_CLASSIC',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9ad6492c7feb50f5eff3113aa558b76fca',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5ferror_17',['CWIID_MESG_ERROR',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a0946b9e7c49cbabab45ef8770aa4874a',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fir_18',['CWIID_MESG_IR',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a2da76a6643373962e31a44eeb09374d3',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fmotionplus_19',['CWIID_MESG_MOTIONPLUS',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9aa494d9c1bd9af9f1b7639ac22842a022',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fnunchuk_20',['CWIID_MESG_NUNCHUK',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a9c2dfeb94c587b92ff5622cb9c0886f3',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5fstatus_21',['CWIID_MESG_STATUS',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9a322228cf4ae8dea2159fd6475a7a5561',1,'cwiid.h']]],
+  ['cwiid_5fmesg_5funknown_22',['CWIID_MESG_UNKNOWN',['../cwiid_8h.html#a39dda265ad3398f4b97dcb26120786b9ad20770cbbd0463dddb1975b41725c2aa',1,'cwiid.h']]]
+];
