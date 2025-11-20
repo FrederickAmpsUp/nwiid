@@ -212,6 +212,7 @@ int cwiid_get_balance_cal(cwiid_wiimote_t *wiimote,
 		cwiid_err(wiimote, "Read error (balancecal)");
 		return -1;
 	}
+  // fun
 	balance_cal->right_top[0]    = ((uint16_t)buf[0]<<8 | (uint16_t)buf[1]);
 	balance_cal->right_bottom[0] = ((uint16_t)buf[2]<<8 | (uint16_t)buf[3]);
 	balance_cal->left_top[0]     = ((uint16_t)buf[4]<<8 | (uint16_t)buf[5]);
