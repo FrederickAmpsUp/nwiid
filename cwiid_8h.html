@@ -399,6 +399,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae8ad3577367533245621f55b86b9ec53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a function to be called on a wiimote message.  <br /></td></tr>
 <tr class="separator:ae8ad3577367533245621f55b86b9ec53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c0bb0657f0660578739a93770eb33c" id="r_a13c0bb0657f0660578739a93770eb33c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13c0bb0657f0660578739a93770eb33c">cwiid_get_mesg</a> (<a class="el" href="classcwiid__wiimote__t.html">cwiid_wiimote_t</a> *wiimote, int *mesg_count, union <a class="el" href="unioncwiid__mesg.html">cwiid_mesg</a> *mesg[], struct timespec *timestamp)</td></tr>
+<tr class="memdesc:a13c0bb0657f0660578739a93770eb33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves available messages from a <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code>.  <br /></td></tr>
 <tr class="separator:a13c0bb0657f0660578739a93770eb33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae003cfd3b91e1563651377101bb06148" id="r_ae003cfd3b91e1563651377101bb06148"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae003cfd3b91e1563651377101bb06148">cwiid_get_state</a> (<a class="el" href="classcwiid__wiimote__t.html">cwiid_wiimote_t</a> *wiimote, struct <a class="el" href="structcwiid__state.html">cwiid_state</a> *state)</td></tr>
 <tr class="separator:ae003cfd3b91e1563651377101bb06148"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -407,6 +408,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aa610cdc5b9e8cc02b553bec64c38694c" id="r_aa610cdc5b9e8cc02b553bec64c38694c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa610cdc5b9e8cc02b553bec64c38694c">cwiid_get_balance_cal</a> (struct wiimote *wiimote, struct <a class="el" href="structbalance__cal.html">balance_cal</a> *<a class="el" href="structbalance__cal.html">balance_cal</a>)</td></tr>
 <tr class="separator:aa610cdc5b9e8cc02b553bec64c38694c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e64e92dec85cd2dd604ca680d4d161" id="r_a14e64e92dec85cd2dd604ca680d4d161"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e64e92dec85cd2dd604ca680d4d161">cwiid_command</a> (<a class="el" href="classcwiid__wiimote__t.html">cwiid_wiimote_t</a> *wiimote, enum <a class="el" href="#a4bf44c0cc6fddd02357b0e1ee029d36e">cwiid_command</a> command, int flags)</td></tr>
+<tr class="memdesc:a14e64e92dec85cd2dd604ca680d4d161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a single <code>cwiid_command</code> to a <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code>.  <br /></td></tr>
 <tr class="separator:a14e64e92dec85cd2dd604ca680d4d161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c660f9babe24a0cbb074bf002107923" id="r_a2c660f9babe24a0cbb074bf002107923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c660f9babe24a0cbb074bf002107923">cwiid_send_rpt</a> (<a class="el" href="classcwiid__wiimote__t.html">cwiid_wiimote_t</a> *wiimote, uint8_t flags, uint8_t report, size_t len, const void *data)</td></tr>
 <tr class="separator:a2c660f9babe24a0cbb074bf002107923"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,6 +427,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a0cefd5e465b055357c4a40b8b0ec5807" id="r_a0cefd5e465b055357c4a40b8b0ec5807"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cefd5e465b055357c4a40b8b0ec5807">cwiid_get_bdinfo_array</a> (int dev_id, unsigned int timeout, int max_bdinfo, struct <a class="el" href="structcwiid__bdinfo.html">cwiid_bdinfo</a> **bdinfo, uint8_t flags)</td></tr>
 <tr class="separator:a0cefd5e465b055357c4a40b8b0ec5807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f91ca52544f674d89be8a712897780d" id="r_a9f91ca52544f674d89be8a712897780d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f91ca52544f674d89be8a712897780d">cwiid_find_wiimote</a> (bdaddr_t *bdaddr, int timeout)</td></tr>
+<tr class="memdesc:a9f91ca52544f674d89be8a712897780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a wiimote and stores it's address in <code>bdaddr</code>.  <br /></td></tr>
 <tr class="separator:a9f91ca52544f674d89be8a712897780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -1263,8 +1266,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                             (<a class="code hl_define" href="#aa5f86f6d0bb57509ed2bf6f376b748ce">CWIID_RPT_NUNCHUK</a> | <a class="code hl_define" href="#a9ebdc867d6c750089dd25cdd7c1246a8">CWIID_RPT_CLASSIC</a> | \</div>
-<div class="line">                             <a class="code hl_define" href="#a1cce9b8534f86ae2ecde83a0eeb2d297">CWIID_RPT_BALANCE</a> | <a class="code hl_define" href="#a5b016e422d80579dd21ad150fceb6458">CWIID_RPT_MOTIONPLUS</a>)</div>
+<b>Value:</b><div class="fragment"><div class="line">                         (<a class="code hl_define" href="#aa5f86f6d0bb57509ed2bf6f376b748ce">CWIID_RPT_NUNCHUK</a> | <a class="code hl_define" href="#a9ebdc867d6c750089dd25cdd7c1246a8">CWIID_RPT_CLASSIC</a> | \</div>
+<div class="line">                         <a class="code hl_define" href="#a1cce9b8534f86ae2ecde83a0eeb2d297">CWIID_RPT_BALANCE</a> | <a class="code hl_define" href="#a5b016e422d80579dd21ad150fceb6458">CWIID_RPT_MOTIONPLUS</a>)</div>
 <div class="ttc" id="acwiid_8h_html_a1cce9b8534f86ae2ecde83a0eeb2d297"><div class="ttname"><a href="#a1cce9b8534f86ae2ecde83a0eeb2d297">CWIID_RPT_BALANCE</a></div><div class="ttdeci">#define CWIID_RPT_BALANCE</div><div class="ttdef"><b>Definition</b> cwiid.h:59</div></div>
 <div class="ttc" id="acwiid_8h_html_a5b016e422d80579dd21ad150fceb6458"><div class="ttname"><a href="#a5b016e422d80579dd21ad150fceb6458">CWIID_RPT_MOTIONPLUS</a></div><div class="ttdeci">#define CWIID_RPT_MOTIONPLUS</div><div class="ttdef"><b>Definition</b> cwiid.h:60</div></div>
 <div class="ttc" id="acwiid_8h_html_a9ebdc867d6c750089dd25cdd7c1246a8"><div class="ttname"><a href="#a9ebdc867d6c750089dd25cdd7c1246a8">CWIID_RPT_CLASSIC</a></div><div class="ttdeci">#define CWIID_RPT_CLASSIC</div><div class="ttdef"><b>Definition</b> cwiid.h:58</div></div>
@@ -1636,6 +1639,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Dispatches a single <code>cwiid_command</code> to a <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wiimote</td><td>The <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code> to dispatch the command to. </td></tr>
+    <tr><td class="paramname">command</td><td>The <code>cwiid_command</code> specifying the type of command to dispatch. </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags to dispatch with the command, if applicable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero (<code>0</code>) on success or non-zero on failure. </dd></dl>
+
 </div>
 </div>
 <a id="a44b3bb0a027395687a03da3e3b0d1747" name="a44b3bb0a027395687a03da3e3b0d1747"></a>
@@ -1746,6 +1760,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Searches for a wiimote and stores it's address in <code>bdaddr</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bdaddr</td><td>[output] The address of the wiimote. #param timeout The number of seconds to search for before failing.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero (<code>0</code>) on success or non-zero on failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Will return non-zero if no wiimote is found. </dd></dl>
 
 </div>
 </div>
@@ -1903,6 +1927,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves available messages from a <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wiimote</td><td>The <code><a class="el" href="classcwiid__wiimote__t.html" title="A handle to a wiimote.">cwiid_wiimote_t</a></code> to retrieve messages from. </td></tr>
+    <tr><td class="paramname">mesg_count</td><td>[output] The number of messages being retrieved. </td></tr>
+    <tr><td class="paramname">mesg</td><td>[output] The list of messages being retrieved. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>[output] The timestamp of the retrieved messages.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero (<code>0</code>) on success or non-zero on failure. </dd></dl>
 
 </div>
 </div>
