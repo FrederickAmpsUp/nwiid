@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(nwiid
   DESCRIPTION "NWiid Wiimote Interface"
-  VERSION 0.6.0
+  VERSION 0.6.1
   LANGUAGES C
 )
 

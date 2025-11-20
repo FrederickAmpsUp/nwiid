@@ -44,17 +44,23 @@ int cwiid_enable(cwiid_wiimote_t *wiimote, int flags)
 {
 	unsigned char data;
 
+  // Don't mess with it unless it actually
+  // needs to be changed
 	if ((flags & CWIID_FLAG_NONBLOCK) &&
 	  !(wiimote->flags & CWIID_FLAG_NONBLOCK)) {
+    // Enable non-blocking I/O if specified
 		if (fcntl(wiimote->mesg_pipe[0], F_SETFL, O_NONBLOCK)) {
 			cwiid_err(wiimote, "File control error (mesg pipe)");
 			return -1;
 		}
 	}
 	if (flags & CWIID_FLAG_MOTIONPLUS) {
+    // Enable motionplus
 		data = 0x04;
+    // magic numbers, fantastic
+    // Should probably pull these out if I can figure out what they do
 		cwiid_write(wiimote, CWIID_RW_REG, 0xA600FE, 1, &data);
-		cwiid_request_status(wiimote);
+		cwiid_request_status(wiimote); // why?
 	}
 	wiimote->flags |= flags;
 	return 0;
@@ -64,19 +70,27 @@ int cwiid_disable(cwiid_wiimote_t *wiimote, int flags)
 {
 	unsigned char data;
 
+  // Update only if it needs it
 	if ((flags & CWIID_FLAG_NONBLOCK) &&
 	  (wiimote->flags & CWIID_FLAG_NONBLOCK)) {
-		if (fcntl(wiimote->mesg_pipe[0], F_SETFL, 0)) {
+    // Seems likely that O_NONBLOCK is the only flag
+    // used on this fd, otherwise it would be disabled
+    // explicitly instead of clearing all flags.
+    if (fcntl(wiimote->mesg_pipe[0], F_SETFL, 0)) {
 			cwiid_err(wiimote, "File control error (mesg pipe)");
 			return -1;
 		}
 	}
 	if (flags & CWIID_FLAG_MOTIONPLUS) {
+    // Disable motionplus
+    // more magic numbers
 		data = 0x55;
 		cwiid_write(wiimote, CWIID_RW_REG, 0xA400F0, 1, &data);
 		data = 0x00;
 		cwiid_write(wiimote, CWIID_RW_REG, 0xA400FB, 1, &data);
-		cwiid_request_status(wiimote);
+		cwiid_request_status(wiimote); // again, why?
+    // Best theory on request_status is that it informs us of
+    // whether motionplus was properly enabled (likely if it's attached)
 	}
 	wiimote->flags &= ~flags;
 	return 0;

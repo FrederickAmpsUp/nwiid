@@ -32,16 +32,21 @@ pthread_mutex_t global_mutex = PTHREAD_MUTEX_INITIALIZER;
 static int wiimote_id = 0;
 
 /* TODO: Turn this onto a macro on next major so version */
-cwiid_wiimote_t *cwiid_open(bdaddr_t *bdaddr, int flags)
+cwiid_wiimote_t *cwiid_open(const bdaddr_t *bdaddr, int flags)
 {
 	return cwiid_open_timeout(bdaddr, flags, DEFAULT_TIMEOUT);
 }
 
-cwiid_wiimote_t *cwiid_open_timeout(bdaddr_t *bdaddr, int flags, int timeout)
+cwiid_wiimote_t *cwiid_open_timeout(const bdaddr_t *usr_bdaddr, int flags, int timeout)
 {
 	struct sockaddr_l2 remote_addr;
 	int ctl_socket = -1, int_socket = -1;
 	struct wiimote *wiimote = NULL;
+
+  // make a local copy to avoid messing with the user's
+  bdaddr_t bdaddr_v;
+  bdaddr_t *bdaddr;
+  bacpy(bdaddr, usr_bdaddr);
 
 	/* If BDADDR_ANY is given, find available wiimote */
 	if (bacmp(bdaddr, BDADDR_ANY) == 0) {
